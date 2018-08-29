@@ -1,0 +1,777 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly CTPtdapiClr, Version=0.0.*, Culture=固定语言(固定国家/地区): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class TdCTP.ErrorInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 ErrorID : Public
+    System.String ErrorMsg : Public
+Class TdCTP.RspUserLogin: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String TradingDay : Public
+    System.String LoginTime : Public
+    System.String BrokerID : Public
+    System.String UserID : Public
+    System.String SystemName : Public
+    Int32 FrontID : Public
+    Int32 SessionID : Public
+    System.String MaxOrderRef : Public
+    System.String SHFETime : Public
+    System.String DCETime : Public
+    System.String CZCETime : Public
+    System.String FFEXTime : Public
+    System.String INETime : Public
+Class TdCTP.RspUserLogout: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String UserID : Public
+Class TdCTP.OrderInsert: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String InstrumentID : Public
+    System.String OrderRef : Public
+    System.String UserID : Public
+    System.String OrderPriceType : Public
+    System.String Direction : Public
+    System.String CombOffsetFlag : Public
+    System.String CombHedgeFlag : Public
+    Double LimitPrice : Public
+    Int32 VolumeTotalOriginal : Public
+    System.String TimeCondition : Public
+    System.String GTDDate : Public
+    System.String VolumeCondition : Public
+    Int32 MinVolume : Public
+    System.String ContingentCondition : Public
+    Double StopPrice : Public
+    System.String ForceCloseReason : Public
+    Int32 IsAutoSuspend : Public
+    System.String BusinessUnit : Public
+    Int32 RequestID : Public
+    Int32 UserForceClose : Public
+    Int32 IsSwapOrder : Public
+    System.String ExchangeID : Public
+Class TdCTP.OrderAction: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    Int32 OrderActionRef : Public
+    System.String OrderRef : Public
+    Int32 RequestID : Public
+    Int32 FrontID : Public
+    Int32 SessionID : Public
+    System.String ExchangeID : Public
+    System.String OrderSysID : Public
+    System.String ActionFlag : Public
+    Double LimitPrice : Public
+    Int32 VolumeChange : Public
+    System.String UserID : Public
+    System.String InstrumentID : Public
+Class TdCTP.RspSettlementInfoConfirm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String ConfirmDate : Public
+    System.String ConfirmTime : Public
+Class TdCTP.RspInputQuoteField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String InstrumentID : Public
+    System.String QuoteRef : Public
+    System.String UserID : Public
+    Double AskPrice : Public
+    Double BidPrice : Public
+    Int32 AskVolume : Public
+    Int32 BidVolume : Public
+    Int32 RequestID : Public
+    System.String BusinessUnit : Public
+    System.String AskOffsetFlag : Public
+    System.String BidOffsetFlag : Public
+    System.String AskHedgeFlag : Public
+    System.String BidHedgeFlag : Public
+    System.String AskOrderRef : Public
+    System.String BidOrderRef : Public
+    System.String ForQuoteSysID : Public
+    System.String ExchangeID : Public
+Class TdCTP.RspQuoteActionField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    Int32 QuoteActionRef : Public
+    System.String QuoteRef : Public
+    Int32 RequestID : Public
+    Int32 FrontID : Public
+    Int32 SessionID : Public
+    System.String ExchangeID : Public
+    System.String QuoteSysID : Public
+    System.String ActionFlag : Public
+    System.String ActionDate : Public
+    System.String ActionTime : Public
+    System.String TraderID : Public
+    Int32 InstallID : Public
+    System.String QuoteLocalID : Public
+    System.String ActionLocalID : Public
+    System.String ParticipantID : Public
+    System.String ClientID : Public
+    System.String BusinessUnit : Public
+    System.String OrderActionStatus : Public
+    System.String UserID : Public
+    System.String StatusMsg : Public
+    System.String InstrumentID : Public
+    System.String BranchID : Public
+Class TdCTP.RspInvestorPositionField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String InstrumentID : Public
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String PosiDirection : Public
+    System.String HedgeFlag : Public
+    System.String PositionDate : Public
+    Int32 YdPosition : Public
+    Int32 Position : Public
+    Int32 LongFrozen : Public
+    Int32 ShortFrozen : Public
+    Double LongFrozenAmount : Public
+    Double ShortFrozenAmount : Public
+    Int32 OpenVolume : Public
+    Int32 CloseVolume : Public
+    Double OpenAmount : Public
+    Double CloseAmount : Public
+    Double PositionCost : Public
+    Double PreMargin : Public
+    Double UseMargin : Public
+    Double FrozenMargin : Public
+    Double FrozenCash : Public
+    Double FrozenCommission : Public
+    Double CashIn : Public
+    Double Commission : Public
+    Double CloseProfit : Public
+    Double PositionProfit : Public
+    Double PreSettlementPrice : Public
+    Double SettlementPrice : Public
+    System.String TradingDay : Public
+    System.String SettlementID : Public
+    Double OpenCost : Public
+    Double ExchangeMargin : Public
+    Int32 CombPosition : Public
+    Int32 CombLongFrozen : Public
+    Int32 CombShortFrozen : Public
+    Double CloseProfitByDate : Public
+    Double CloseProfitByTrade : Public
+    Int32 TodayPosition : Public
+    Double MarginRateByMoney : Public
+    Double MarginRateByVolume : Public
+    Int32 StrikeFrozen : Public
+    Int32 StrikeFrozenAmount : Public
+    Int32 AbandonFrozen : Public
+    System.String ExchangeID : Public
+    Int32 YdStrikeFrozen : Public
+Class TdCTP.RspTradingAccountField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String AccountID : Public
+    Double PreMortgage : Public
+    Double PreCredit : Public
+    Double PreDeposit : Public
+    Double PreBalance : Public
+    Double PreMargin : Public
+    Double InterestBase : Public
+    Double Interest : Public
+    Double Deposit : Public
+    Double Withdraw : Public
+    Double FrozenMargin : Public
+    Double FrozenCash : Public
+    Double FrozenCommission : Public
+    Double CurrMargin : Public
+    Double CashIn : Public
+    Double Commission : Public
+    Double CloseProfit : Public
+    Double PositionProfit : Public
+    Double Balance : Public
+    Double Available : Public
+    Double WithdrawQuota : Public
+    Double Reserve : Public
+    System.String TradingDay : Public
+    System.String SettlementID : Public
+    Double Credit : Public
+    Double Mortgage : Public
+    Double ExchangeMargin : Public
+    Double DeliveryMargin : Public
+    Double ExchangeDeliveryMargin : Public
+    Double ReserveBalance : Public
+    System.String CurrencyID : Public
+    Double PreFundMortgageIn : Public
+    Double PreFundMortgageOut : Public
+    Double FundMortgageIn : Public
+    Double FundMortgageOut : Public
+    Double FundMortgageAvailable : Public
+    Double MortgageableFund : Public
+    Double SpecProductMargin : Public
+    Double SpecProductFrozenMargin : Public
+    Double SpecProductCommission : Public
+    Double SpecProductFrozenCommission : Public
+    Double SpecProductPositionProfit : Public
+    Double SpecProductCloseProfit : Public
+    Double SpecProductPositionProfitByAlg : Public
+    Double SpecProductExchangeMargin : Public
+    System.String BizType : Public
+Class TdCTP.RspInvestorField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String InvestorID : Public
+    System.String BrokerID : Public
+    System.String InvestorGroupID : Public
+    System.String InvestorName : Public
+    System.String IdentifiedCardType : Public
+    System.String IdentifiedCardNo : Public
+    Int32 IsActive : Public
+    System.String Telephone : Public
+    System.String Address : Public
+    System.String OpenDate : Public
+    System.String Mobile : Public
+    System.String CommModelID : Public
+    System.String MarginModelID : Public
+Class TdCTP.RspSettlementInfoField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String TradingDay : Public
+    Int32 SettlementID : Public
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    Int32 SequenceNo : Public
+    System.String Content : Public
+Class TdCTP.RspInvestorPositionDelailField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String InstrumentID : Public
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String HedgeFlag : Public
+    System.String Direction : Public
+    System.String OpenDate : Public
+    System.String TradeID : Public
+    Int32 Volume : Public
+    Double OpenPrice : Public
+    System.String TradingDay : Public
+    Int32 SettlementID : Public
+    System.String TradeType : Public
+    System.String CombInstrumentID : Public
+    System.String ExchangeID : Public
+    Double CloseProfitByDate : Public
+    Double CloseProfitByTrade : Public
+    Double PositionProfitByDate : Public
+    Double PositionProfitByTrade : Public
+    Double Margin : Public
+    Double ExchMargin : Public
+    Double MarginRateByMoney : Public
+    Double MarginRateByVolume : Public
+    Double LastSettlementPrice : Public
+    Double SettlementPrice : Public
+    Int32 CloseVolume : Public
+    Double CloseAmount : Public
+Class TdCTP.RspInvestorPositionCombineDetailField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String TradingDay : Public
+    System.String OpenDate : Public
+    System.String ExchangeID : Public
+    Int32 SettlementID : Public
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String ComTradeID : Public
+    System.String TradeID : Public
+    System.String InstrumentID : Public
+    System.String HedgeFlag : Public
+    System.String Direction : Public
+    Int32 TotalAmt : Public
+    Double Margin : Public
+    Double ExchMargin : Public
+    Double MarginRateByMoney : Public
+    Double MarginRateByVolume : Public
+    Int32 LegID : Public
+    Int32 LegMultiple : Public
+    System.String CombInstrumentID : Public
+    Int32 TradeGroupID : Public
+Class TdCTP.RspAuthenticateField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String UserID : Public
+    System.String UserProductInfo : Public
+Class TdCTP.RspInstrumentField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String InstrumentID : Public
+    System.String ExchangeID : Public
+    System.String InstrumentName : Public
+    System.String ExchangeInstID : Public
+    System.String ProductID : Public
+    System.String ProductClass : Public
+    Int32 DeliveryYear : Public
+    Int32 DeliveryMonth : Public
+    Int32 MaxMarketOrderVolume : Public
+    Int32 MinMarketOrderVolume : Public
+    Int32 MaxLimitOrderVolume : Public
+    Int32 MinLimitOrderVolume : Public
+    Int32 VolumeMultiple : Public
+    Double PriceTick : Public
+    System.String CreateDate : Public
+    System.String OpenDate : Public
+    System.String ExpireDate : Public
+    System.String StartDelivDate : Public
+    System.String EndDelivDate : Public
+    System.String InstLifePhase : Public
+    Int32 IsTrading : Public
+    System.String PositionType : Public
+    System.String PositionDateType : Public
+    Double LongMarginRatio : Public
+    Double ShortMarginRatio : Public
+    System.String MaxMarginSideAlgorithm : Public
+    System.String UnderlyingInstrID : Public
+    Double StrikePrice : Public
+    System.String OptionsType : Public
+    Double UnderlyingMultiple : Public
+    System.String CombinationType : Public
+    Int32 MinBuyVolume : Public
+    Int32 MinSellVolume : Public
+    System.String InstrumentCode : Public
+Class TdCTP.RtnOrderField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String InstrumentID : Public
+    System.String OrderRef : Public
+    System.String UserID : Public
+    System.String OrderPriceType : Public
+    System.String Direction : Public
+    System.String CombOffsetFlag : Public
+    System.String CombHedgeFlag : Public
+    Double LimitPrice : Public
+    Int32 VolumeTotalOriginal : Public
+    System.String TimeCondition : Public
+    System.String GTDDate : Public
+    System.String VolumeCondition : Public
+    Int32 MinVolume : Public
+    System.String ContingentCondition : Public
+    Double StopPrice : Public
+    System.String ForceCloseReason : Public
+    Int32 IsAutoSuspend : Public
+    System.String BusinessUnit : Public
+    Int32 RequestID : Public
+    System.String OrderLocalID : Public
+    System.String ExchangeID : Public
+    System.String ParticipantID : Public
+    System.String ClientID : Public
+    System.String ExchangeInstID : Public
+    System.String TraderID : Public
+    Int32 InstallID : Public
+    System.String OrderSubmitStatus : Public
+    Int32 NotifySequence : Public
+    System.String TradingDay : Public
+    Int32 SettlementID : Public
+    System.String OrderSysID : Public
+    System.String OrderSource : Public
+    System.String OrderStatus : Public
+    System.String OrderType : Public
+    Int32 VolumeTraded : Public
+    Int32 VolumeTotal : Public
+    System.String InsertDate : Public
+    System.String InsertTime : Public
+    System.String ActiveTime : Public
+    System.String SuspendTime : Public
+    System.String UpdateTime : Public
+    System.String CancelTime : Public
+    System.String ActiveTraderID : Public
+    System.String ClearingPartID : Public
+    Int32 SequenceNo : Public
+    Int32 FrontID : Public
+    Int32 SessionID : Public
+    System.String UserProductInfo : Public
+    System.String StatusMsg : Public
+    Int32 UserForceClose : Public
+    System.String ActiveUserID : Public
+    Int32 BrokerOrderSeq : Public
+    System.String RelativeOrderSysID : Public
+    Int32 ZCETotalTradedVolume : Public
+    Int32 IsSwapOrder : Public
+    System.String BranchID : Public
+Class TdCTP.RtnTradeField: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String InstrumentID : Public
+    System.String OrderRef : Public
+    System.String UserID : Public
+    System.String ExchangeID : Public
+    System.String TradeID : Public
+    System.String Direction : Public
+    System.String OrderSysID : Public
+    System.String ParticipantID : Public
+    System.String ClientID : Public
+    System.String TradingRole : Public
+    System.String ExchangeInstID : Public
+    System.String OffsetFlag : Public
+    System.String HedgeFlag : Public
+    Double Price : Public
+    Int32 Volume : Public
+    System.String TradeDate : Public
+    System.String TradeTime : Public
+    System.String TradeType : Public
+    System.String PriceSource : Public
+    System.String TraderID : Public
+    System.String OrderLocalID : Public
+    System.String ClearingPartID : Public
+    System.String BusinessUnit : Public
+    Int32 SequenceNo : Public
+    System.String TradingDay : Public
+    Int32 SettlementID : Public
+    Int32 BrokerOrderSeq : Public
+    System.String TradeSource : Public
+Class TdCTP.OnFrontConnectedDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnFrontDisconnectedDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnAuthenticateDelegata: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspAuthenticateField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspAuthenticateField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspUserLoginDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspUserLogin, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspUserLogin, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspUserLogoutDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspUserLogout, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspUserLogout, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspErrorDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspOrderInsertDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderInsert, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderInsert, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspOrderActionDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(OrderAction, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(OrderAction, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspSettlementInfoConfirmDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspSettlementInfoConfirm, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspSettlementInfoConfirm, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQuoteInsertDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspInputQuoteField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspInputQuoteField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQuoteActionDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspQuoteActionField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspQuoteActionField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQryInvestorPositionDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspInvestorPositionField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspInvestorPositionField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQryTradingAccountDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspTradingAccountField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspTradingAccountField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQryInvestorDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspInvestorField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspInvestorField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQryInstrumentDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspInstrumentField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspInstrumentField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQrySettlementInfoDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspSettlementInfoField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspSettlementInfoField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQryInvestorPositionDetailDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspInvestorPositionDelailField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspInvestorPositionDelailField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQrySettlementInfoConfirmDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspSettlementInfoConfirm, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspSettlementInfoConfirm, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRspQryInvestorPositionCombineDetailDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RspInvestorPositionCombineDetailField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RspInvestorPositionCombineDetailField, ErrorInfo, Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRtnOrderDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RtnOrderField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RtnOrderField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.OnRtnTradeDelegate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RtnTradeField): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RtnTradeField, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class TdCTP.TdApiClr: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    TdCTP.OnFrontConnectedDelegate onFrontConnectDelegate : Public
+    TdCTP.OnFrontDisconnectedDelegate onFrontDisConnectDelegate : Public
+    TdCTP.OnAuthenticateDelegata onAuthenDelegate : Public
+    TdCTP.OnRspUserLoginDelegate onRspLoginDelegate : Public
+    TdCTP.OnRspUserLogoutDelegate onRspLogoutDelegate : Public
+    TdCTP.OnRspErrorDelegate onErrorDelegate : Public
+    TdCTP.OnRspOrderInsertDelegate onRspOrderInsertDelegate : Public
+    TdCTP.OnRspOrderActionDelegate onOrderActionDelegate : Public
+    TdCTP.OnRspQuoteInsertDelegate onQuoteInsertDelegate : Public
+    TdCTP.OnRspQuoteActionDelegate onQuoteActionDelegate : Public
+    TdCTP.OnRspQryInvestorPositionDelegate onRspInvestorPositionDelegate : Public
+    TdCTP.OnRspQryTradingAccountDelegate onTradingAccountDelegate : Public
+    TdCTP.OnRspQryInvestorDelegate onInvestorDelegate : Public
+    TdCTP.OnRspQryInstrumentDelegate onInstrumentDelegate : Public
+    TdCTP.OnRspSettlementInfoConfirmDelegate onRspSettlementInfoConfirmDelegate : Public
+    TdCTP.OnRspQrySettlementInfoDelegate onSettlementInfoDelegate : Public
+    TdCTP.OnRspQryInvestorPositionDetailDelegate onRspQryInvestorPositionDetailDelegate : Public
+    TdCTP.OnRspQryInvestorPositionCombineDetailDelegate onInvestorPositionCombineDetailDelegate : Public
+    TdCTP.OnRspQrySettlementInfoConfirmDelegate onRspQrySettlementInfoConfirmDelegate : Public
+    TdCTP.OnRtnOrderDelegate onRtnOrderDelegate : Public
+    TdCTP.OnRtnTradeDelegate onRtnTradeDelegate : Public
+  Methods:
+    SetOnFrontConnectedDelegate(OnFrontConnectedDelegate): PrivateScope, Public, HideBySig
+    SetOnFrontDisconnectedDelegate(OnFrontDisconnectedDelegate): PrivateScope, Public, HideBySig
+    SetOnRspUserLoginDelegate(OnRspUserLoginDelegate): PrivateScope, Public, HideBySig
+    SetOnRspUserLogoutDelegate(OnRspUserLogoutDelegate): PrivateScope, Public, HideBySig
+    SetAuthenDelegate(OnAuthenticateDelegata): PrivateScope, Public, HideBySig
+    SetOnRspErrorDelegate(OnRspErrorDelegate): PrivateScope, Public, HideBySig
+    SetOnRspOrderInsertDelegate(OnRspOrderInsertDelegate): PrivateScope, Public, HideBySig
+    SetOnRspOrderActionDelegate(OnRspOrderActionDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQuoteInsertDelegate(OnRspQuoteInsertDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQuoteActionDelegate(OnRspQuoteActionDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQryInvestorPositionDelegate(OnRspQryInvestorPositionDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQryTradingAccountDelegate(OnRspQryTradingAccountDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQryInvestorDelegate(OnRspQryInvestorDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQryInstrumentDelegate(OnRspQryInstrumentDelegate): PrivateScope, Public, HideBySig
+    SetOnRspSettlementInfoConfirmDelegate(OnRspSettlementInfoConfirmDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQrySettlementInfoDelegate(OnRspQrySettlementInfoDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQryInvestorPositionDetailDelegate(OnRspQryInvestorPositionDetailDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQryInvestorPositionCombineDetailDelegate(OnRspQryInvestorPositionCombineDetailDelegate): PrivateScope, Public, HideBySig
+    SetOnRspQrySettlementInfoConfirmDelegate(OnRspQrySettlementInfoConfirmDelegate): PrivateScope, Public, HideBySig
+    SetOnRtnOrderDelegate(OnRtnOrderDelegate): PrivateScope, Public, HideBySig
+    SetOnRtnTradeDelegate(OnRtnTradeDelegate): PrivateScope, Public, HideBySig
+    GetInstance(): PrivateScope, Public, Static, HideBySig
+    OnFrontConnected_(): PrivateScope, Public, HideBySig
+    OnFrontDisconnected_(Int32): PrivateScope, Public, HideBySig
+    OnRspAuthenticate_(RspAuthenticateField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspUserLogin_(RspUserLogin, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspUserLogout_(RspUserLogout, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspOrderInsert_(OrderInsert, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspOrderAction_(OrderAction, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspSettlementInfoConfirm_(RspSettlementInfoConfirm, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQuoteInsert_(RspInputQuoteField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQuoteAction_(RspQuoteActionField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQryInvestorPosition_(RspInvestorPositionField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQryTradingAccount_(RspTradingAccountField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQryInvestor_(RspInvestorField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQryInstrument_(RspInstrumentField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQrySettlementInfo_(RspSettlementInfoField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQryInvestorPositionDetail_(RspInvestorPositionDelailField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQrySettlementInfoConfirm_(RspSettlementInfoConfirm, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspQryInvestorPositionCombineDetail_(RspInvestorPositionCombineDetailField, ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRspError_(ErrorInfo, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OnRtnOrder_(RtnOrderField): PrivateScope, Public, HideBySig
+    OnRtnTrade_(RtnTradeField): PrivateScope, Public, HideBySig
+    CreateTdApi_(SByte*): PrivateScope, Public, HideBySig
+    GetApiVersion_(): PrivateScope, Public, HideBySig
+    Init_(): PrivateScope, Public, HideBySig
+    Release_(): PrivateScope, Public, HideBySig
+    Join_(): PrivateScope, Public, HideBySig
+    GetTradingDay_(): PrivateScope, Public, HideBySig
+    RegisterFront_(SByte*): PrivateScope, Public, HideBySig
+    RegisterNameServer_(SByte*): PrivateScope, Public, HideBySig
+    SubscribePrivateTopic_(): PrivateScope, Public, HideBySig
+    SubscribePublicTopic_(): PrivateScope, Public, HideBySig
+    ReqAuthenticate_(ReqAuthenticateField, Int32): PrivateScope, Public, HideBySig
+    ReqUserLogin_(ReqUserLoginField, Int32): PrivateScope, Public, HideBySig
+    ReqUserLogout_(ReqUserLogoutField, Int32): PrivateScope, Public, HideBySig
+    ReqOrderInsert_(OrderInsert, Int32): PrivateScope, Public, HideBySig
+    ReqOrderAction_(OrderAction, Int32): PrivateScope, Public, HideBySig
+    ReqSettlementInfoConfirm_(ReqSettlementInfoConfirmField, Int32): PrivateScope, Public, HideBySig
+    ReqQryInvestorPosition_(ReqInvestorPositionField, Int32): PrivateScope, Public, HideBySig
+    ReqQryTradingAccount_(ReqTradingAccountField, Int32): PrivateScope, Public, HideBySig
+    ReqQryInvestor_(ReqInvestorField, Int32): PrivateScope, Public, HideBySig
+    ReqQryInstrument_(ReqInstrumentField, Int32): PrivateScope, Public, HideBySig
+    ReqQrySettlementInfo_(ReqSettlementInfoField, Int32): PrivateScope, Public, HideBySig
+    ReqQryInvestorPositionDetail_(ReqInvestorPositionDetailField, Int32): PrivateScope, Public, HideBySig
+    ReqQrySettlementInfoConfirm_(ReqSettlementInfoConfirmField, Int32): PrivateScope, Public, HideBySig
+    ReqQryInvestorPositionCombineDetail_(ReqInvestorPositionCombineDetailField, Int32): PrivateScope, Public, HideBySig
+    CreateCenter(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class TdCTP.TdApiClr+ReqSettlementInfoConfirmField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+Class TdCTP.TdApiClr+ReqInvestorPositionField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String InstrumentID : Public
+    System.String ExchangeID : Public
+Class TdCTP.TdApiClr+ReqTradingAccountField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String CurrencyID : Public
+    System.String BizType : Public
+Class TdCTP.TdApiClr+ReqInvestorField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+Class TdCTP.TdApiClr+ReqSettlementInfoField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String TradingDay : Public
+Class TdCTP.TdApiClr+ReqInvestorPositionDetailField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String InstrumentID : Public
+    System.String ExchangeID : Public
+Class TdCTP.TdApiClr+ReqInvestorPositionCombineDetailField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String InvestorID : Public
+    System.String CombInstrumentID : Public
+Class TdCTP.TdApiClr+ReqUserLoginField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String TradingDay : Public
+    System.String BrokerID : Public
+    System.String UserID : Public
+    System.String Password : Public
+    System.String UserProductInfo : Public
+    System.String InterfaceProductInfo : Public
+    System.String ProtocolInfo : Public
+    System.String MacAddress : Public
+    System.String OneTimePassword : Public
+    System.String ClientIPAddress : Public
+Class TdCTP.TdApiClr+ReqUserLogoutField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String UserID : Public
+Class TdCTP.TdApiClr+ReqInstrumentField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String InstrumentID : Public
+    System.String ExchangeID : Public
+    System.String ExchangeInstID : Public
+    System.String ProductID : Public
+Class TdCTP.TdApiClr+ReqAuthenticateField: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String BrokerID : Public
+    System.String UserID : Public
+    System.String UserProductInfo : Public
+    System.String AuthCode : Public
+Class TdCTP.TdApiClr+ReqInstrument: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String InstrumentID : Public
+    System.String ExchangeID : Public
+    System.String ExchangeInstID : Public
+    System.String ProductID : Public
+Struct TdCTP.Task: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Methods:
+    <MarshalCopy>(Task*, Task*): PrivateScope, Public, Static, SpecialName
+    <MarshalDestroy>(Task*): PrivateScope, Public, Static, SpecialName
+Struct TdCTP.TdCenterSpi: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
